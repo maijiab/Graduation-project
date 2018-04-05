@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.zjitc.domain.orderitem.Orderitem" table="orderitem" schema="film">
+        <id name="itemid">
+            <column name="itemid" sql-type="int(11)"/>
+            <generator class="native"/>
+        </id>
+        <property name="count">
+            <column name="count" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="subtotal">
+            <column name="subtotal" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="osatate">
+            <column name="osatate" sql-type="int(11)" not-null="true"/>
+        </property>
+
+        <!--order属性，本类与order的属性为 多对一 -->
+        <many-to-one name="order" column="oid" class="net.zjitc.domain.orders.Orders" cascade="save-update" lazy="false"/>
+        <!--produc属性，本类与product属性为 多对一 -->
+        <many-to-one name="product" column="pid" class="net.zjitc.domain.product.Product" lazy="false"/>
+    </class>
+</hibernate-mapping>

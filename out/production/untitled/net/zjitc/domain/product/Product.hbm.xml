@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.zjitc.domain.product.Product" table="product" schema="film">
+        <id name="pid">
+            <column name="pid" sql-type="int(11)"/>
+            <generator class="native"/>
+        </id>
+        <property name="pname">
+            <column name="pname" sql-type="varchar(300)" length="300" not-null="true"/>
+        </property>
+        <property name="image">
+            <column name="image" sql-type="varchar(300)" length="300" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="pdesc">
+            <column name="pdesc" sql-type="varchar(300)" length="300" not-null="true"/>
+        </property>
+        <property name="pdate">
+            <column name="pdate" sql-type="datetime" not-null="false"/>
+        </property>
+        <property name="isHot">
+            <column name="is_hot" sql-type="int(11)" not-null="true"/>
+        </property>
+
+        <many-to-one name="categorysecond" class="net.zjitc.domain.categorysecond.Categorysecond" column="csid" lazy="false"/>
+
+        <!--orderitems属性，本类与orderitems属性为 一对多 的关系 -->
+        <set name="orderitems" lazy="false">
+            <key column="pid"></key>
+            <one-to-many class="net.zjitc.domain.orderitem.Orderitem"/>
+        </set>
+
+        <!--evaluates属性，本类与evaluates为 一对多 的关系-->
+        <set name="evaluates" lazy="false">
+            <key column="pid"></key>
+            <one-to-many class="net.zjitc.domain.evaluate.Evaluate"/>
+        </set>
+    </class>
+</hibernate-mapping>

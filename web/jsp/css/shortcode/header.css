@@ -1,0 +1,104 @@
+.icon-nav::after {
+    color: #2c2c2c;
+    content: "";
+    cursor: pointer;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    vertical-align: middle;
+}
+.header-pos {
+    background: transparent none repeat scroll 0 0;
+    left: 0;
+    padding: 25px 15px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+.logo{padding-top: 35px;}
+.main-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+.main-menu ul li a{color: #2c2c2c;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-right: 1px;
+    padding: 20px 18px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 300ms ease-in 0s;font-family: 'Raleway', sans-serif;}
+.setting-menu{
+    display: inline-block;
+    margin: 45px 0 0 30px;
+    position: relative;
+}
+div.current {
+    color: #797979;
+    cursor: pointer;
+    font-family: raleway;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0 15px;
+    text-shadow: none;
+}
+.content-nav li {
+    color: #797979;
+    font-size: 12px;
+    line-height: 40px;
+}
+.content-nav.toogle-content {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.39);
+    display: none;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 50px;
+    width: 170px;
+    z-index: 999;
+}
+.toogle-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+}
+.header-area.scroll-header .logo {
+    padding-top: 15px;
+}
+.header-area.scroll-header .main-menu {
+    margin: 0 10px 0 0;
+}
+.header-area.scroll-header {
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0 ;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+.main-menu{
+    margin: 25px 10px 0 0;
+    position: relative;}
+.header-black-right .icon-nav::after {
+    color: #fff;
+}
+
+.main-menu ul li:hover > a, .main-menu ul li ul.submenu li a:hover,.main-menu ul li .mega-menu ul li a:hover{color:#ffae00}
+.space-custom {
+    margin-bottom: -60px;
+    height: 123px
+}

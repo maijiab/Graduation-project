@@ -1,0 +1,315 @@
+/*cart-style*/
+.table-content {}
+.table-content table {
+                      background: #fff none repeat scroll 0 0;
+                      border-color: #e5e5e5;
+                      border-radius: 0;
+                      border-style: solid;
+                      border-width: 1px 0 0 1px;
+                      margin: 0 0 50px;
+                      text-align: center;
+                      width: 100%;
+                  }
+.table-content table {}
+.table-content table th {
+                            border-top: medium none;
+                            font-family: Montserrat, Arial, Helvetica, sans-serif;
+                            font-weight: normal;
+                            padding: 20px 10px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            vertical-align: middle;
+                            white-space: nowrap;
+                        }
+.table-content table th,
+.table-content table td {
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.table-content table td {
+    border-top: medium none;
+    padding: 20px 10px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+.table-content table td input {
+    background: #e5e5e5 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #6f6f6f;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 40px;
+    padding: 0 5px 0 10px;
+    width: 60px;
+}
+.buttons-cart input,
+.coupon input[type="submit"],
+.buttons-cart a,
+.coupon-info p.form-row input[type="submit"] {
+    background: #252525 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    padding: 0 15px;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    width: inherit;
+}
+.buttons-cart {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.buttons-cart a {
+    color: #fff;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.coupon input[type=submit] {} .cart_totals {
+                                  float: left;
+                                  text-align: right;
+                                  width: 100%;
+                              }
+.cart_totals table {
+    border: medium none;
+    float: right;
+    margin: 0;
+    text-align: right;
+}
+.cart_totals table th {
+    border: medium none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 20px 12px 0;
+    text-align: right;
+    text-transform: uppercase;
+    vertical-align: top;
+}
+.cart_totals table td {
+    border: medium none;
+    padding: 0 0 12px;
+    vertical-align: top;
+}
+.cart_totals table {} .cart_totals table td .amount {
+                          color: #ffae00;
+                          float: right;
+                          font-size: 13px;
+                          font-weight: bold;
+                          margin-left: 5px;
+                          text-align: right;
+                          text-transform: uppercase;
+                      }
+.wc-proceed-to-checkout {
+    clear: both;
+    display: block;
+}
+.cart_totals table tr.order-total .amount {
+    font-size: 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.cart_totals table tr.order-total .amount {} .wc-proceed-to-checkout a {
+                                                 background: #ffae00 none repeat scroll 0 0;
+                                                 color: #fff;
+                                                 display: inline-block;
+                                                 font-size: 14px;
+                                                 font-weight: 700;
+                                                 height: 50px;
+                                                 line-height: 50px;
+                                                 margin-top: 20px;
+                                                 padding: 0 30px;
+                                                 text-transform: none;
+                                             }
+/*shop-style*/
+.breadcrumb a {
+    color: #3c3c3c;
+}
+.breadcrumb > .active,
+.breadcrumb a:hover {
+    color: #ffae00;
+}
+.breadcrumb {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 1px solid #ebebeb;
+    color: #ffae00;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 0 50px;
+    min-height: 6px;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    text-transform: capitalize;
+    width: 100%;
+    z-index: 1;
+}
+.single-service {} .service-icon {
+                       float: left;
+                   }
+.service-icon i {
+    color: #ffae00;
+    display: inline-block;
+    font-size: 48px;
+    line-height: 47px;
+    margin-right: 15px;
+}
+.service-title {
+    margin-left: 50px;
+}
+.service-title h3 {
+    color: #252525;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+.service-title p {
+    color: #7d7d7d;
+    font-size: 13px;
+    line-height: 23px;
+    margin: 0;
+}
+.breadcrumb {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 1px solid #ebebeb;
+    color: #ffae00;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 0 50px;
+    min-height: 6px;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    text-transform: capitalize;
+    width: 100%;
+    z-index: 1;
+}
+/*index-style*/
+.banner-area {} .single-banner {} .single-banner img {
+                                      width: 100%;
+                                  }
+.single-banner a {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+}
+.single-banner a::before {
+    bottom: 20px;
+    content: "";
+    left: 20px;
+    opacity: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+}
+.single-banner a::before {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    content: "";
+    transform: scale(0, 1);
+}
+.section-title {} .section-title h2 {
+                      color: #252525;
+                      display: inline-block;
+                      font-size: 24px;
+                      font-weight: 700;
+                      line-height: 22px;
+                      padding-bottom: 25px;
+                      position: relative;
+                      text-transform: uppercase;
+                      z-index: 2;
+                  }
+                  /*evaluate*/
+.latest-blog-area {
+}.blog-wrapper {
+     overflow:hidden;
+ }
+.blog-img {
+    overflow:hidden;
+}
+.blog-img img {
+    transition:all 0.3s ease 0s;
+    width:100%;
+}
+
+
+
+
+.blog-info {
+    font-weight:400;
+    padding:38px 0 0;
+}
+.blog-info h3 {
+}.blog-info h3 a {
+     color:#000;
+     font-size:13px;
+     font-weight:700;
+     margin-bottom:7px;
+     margin-top:30px;
+     text-transform:uppercase;
+ }
+.blog-meta {
+    margin-top:20px;
+    overflow:hidden;
+}
+.blog-meta span {
+    color:#959595;
+    font-size:13px;
+}
+.blog-meta span a {
+    color:#363636;
+    display:inline-block;
+    font-size:11px;
+    text-transform:uppercase;
+    transition:all 300ms ease-in 0s;
+}
+
+
+
+.blog-meta span a:after {
+    content:"\f178";
+    font-family:FontAwesome;
+    padding-left:5px;
+}
+.blog-large span a i {
+    margin-right:5px;
+}
+.blog-large span {
+    margin-left:15px;
+}
+.blog-main {
+}.blog-main .blog-info {
+     padding:15px 0 0;
+ }
+.blog-main .blog-meta {
+    margin:15px 0;
+}
+.icon-1{
+    padding: 0 20px 0 ;
+    float: right;
+}
+.icon-2{
+    padding: 0 20px 0 ;
+    float: right;
+}
+.icon-3{
+    padding: 0 20px 0 ;
+    float: right;
+}

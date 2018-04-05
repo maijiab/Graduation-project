@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.zjitc.domain.categorysecond.Categorysecond" table="categorysecond" schema="film">
+        <id name="csid">
+            <column name="csid" sql-type="int(11)"/>
+            <generator class="native"/>
+        </id>
+        <property name="csname">
+            <column name="csname" sql-type="varchar(300)" length="300" not-null="true"/>
+        </property>
+
+        <many-to-one name="category" class="net.zjitc.domain.category.Category" column="cid"  fetch="select"  lazy="false"/>
+
+        <set name="products" cascade="delete" inverse="true" lazy="false">
+            <key column="csid"></key>
+            <one-to-many class="net.zjitc.domain.product.Product"/>
+        </set>
+    </class>
+</hibernate-mapping>

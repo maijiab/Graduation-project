@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+<struts>
+    <package name="film" namespace="/"  extends="struts-default">
+        <interceptors>
+            <interceptor name="myInterceptor" class="adminInterceptor"/>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="myInterceptor"/>
+                <interceptor-ref name="defaultStack"/>
+            </interceptor-stack>
+        </interceptors>
+
+        <global-results>
+            <result name="noLogin">/admin/login.jsp</result>
+        </global-results>
+
+      <action name="admin_*" class="adminAction" method="{1}">
+          <result name="loginUI">/admin/login.jsp</result>
+          <result name="loginFail">/admin/login.jsp</result>
+          <result name="loginSuccess" type="redirect" >/admin/index.jsp</result>
+      </action>
+
+        <action name="adminUser_*" class="adminAction" method="{1}">
+            <result name="findAllUser">/admin/user/message-task.jsp</result>
+            <result name="deleteUser" type="redirectAction">adminUser_findAllUser.action</result>
+            <interceptor-ref name="myStack"></interceptor-ref>
+      </action>
+        <action name="adminCategory_*" class="categoryAction" method="{1}">
+            <result name="list">/admin/category/cate.jsp</result>
+            <result name="tolist" type="redirectAction">adminCategory_findAll.action</result>
+            <result name="addUI">/admin/category/add.jsp</result>
+            <result name="editUI">/admin/category/edit.jsp</result>
+            <result name="deleteError" type="redirectAction">
+                <param name="actionName">adminCategory_findAll</param>
+                <param name="namespace">/</param>
+                <param name="message">${message}</param>
+            </result>
+            <interceptor-ref name="myStack"></interceptor-ref>
+        </action>
+        <action name="adminCategorySecond_*" class="categorySecondAction" method="{1}">
+            <result name="list">/admin/categorysecond/cates.jsp</result>
+            <result name="tolist" type="redirectAction">adminCategorySecond_findPage?page=1</result>
+            <result name="addUI">/admin/categorysecond/add.jsp</result>
+            <result name="editUI">/admin/categorysecond/edit.jsp</result>
+            <result name="deleteError" type="redirectAction">
+                <param name="actionName">adminCategorySecond_findPage?page=1</param>
+                <param name="namespace">/</param>
+                <param name="message">${message}</param>
+            </result>
+            <interceptor-ref name="myStack"></interceptor-ref>
+        </action>
+
+        <!--配置产品管理-->
+        <action name="adminProduct_*" class="productAction" method="{1}">
+            <result name="list">/admin/product/product.jsp</result>
+            <result name="queryList" >/admin/product/productS.jsp</result>
+            <result name="tolist" type="redirectAction">adminProduct_findPage?page=1</result>
+            <result name="addUI">/admin/product/add.jsp</result>
+            <result name="editUI">/admin/product/edit.jsp</result>
+        </action>
+
+        <action name="adminOrder_*" class="orderAction" method="{1}">
+            <result name="orderList">/admin/order/order.jsp</result>
+            <result name="stateList">/admin/order/order.jsp</result>
+            <result name="editState" type="redirectAction">adminOrder_findPageBean?page=1</result>
+        </action>
+        <action name="adminEvaluate_*" class="adminEvaluateAction" method="{1}">
+            <result name="list">/admin/evaluate/evaluate.jsp</result>
+            <result name="evaluateList" type="redirectAction">adminEvaluate_findPageBean?page=1</result>
+        </action>
+
+      <action name="index" class="indexAction" method="exectue">
+          <result name="index">/jsp/index.jsp</result>
+      </action>
+
+        <action name="userProduct_*" class="userProductAction" method="{1}">
+            <result name="findByCid">/jsp/shop.jsp</result>
+            <result name="findByCSid">/jsp/product.jsp</result>
+            <result name="findByPdid">/jsp/product-details.jsp</result>
+        </action>
+
+          <action name="user_*" class="userAction" method="{1}">
+            <!--注册配置-->
+            <result name="registUI">/jsp/regist.jsp</result>
+            <result name="registSuccess">index.jsp</result>
+            <result name="input">/jsp/regist.jsp</result>
+            <!--登录配置-->
+            <result name="loginUI">/jsp/login.jsp</result>
+            <result name="loginSuccess">/index.jsp</result>
+              <result name="loginOut">/jsp/login.jsp</result>
+          </action>
+
+          <action name="codeGenerate" class="validateCodeAction" method="execute"></action>
+
+        <action name="cart_*" class="cartAction" method="{1}">
+            <result name="cart">/jsp/cart.jsp</result>
+            <result name="login">/jsp/login.jsp</result>
+        </action>
+        <!--订单模块-->
+        <action name="userOrder_*" class="userOrderAction" method="{1}">
+            <result name="order">/jsp/order.jsp</result>
+            <result name="login">/jsp/login.jsp</result>
+            <result name="msg">/jsp/mes.jsp</result>
+            <result name="orderList">/jsp/orderlist.jsp</result>
+            <result name="toOrderList" type="redirectAction">
+                <param name="actionName">/jsp/userOrder_findByUid</param>
+                <param name="page">${page}</param> <!--传进来当前的参数，-->
+            </result>
+        </action>
+
+        <!--评价模块-->
+        <action name="userEvaluate_*" class="evaluateAction" method="{1}">
+            <result name="evaluateUI">/jsp/addEvaluate.jsp</result>
+            <result name="msg">/jsp/index.jsp</result>
+        </action>
+         </package>
+
+</struts>
